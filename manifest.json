@@ -1,0 +1,16 @@
+{
+  "name": "Untuk Semestaku",
+  "short_name": "Ultah Sayang",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffb6c1",
+  "theme_color": "#ffb6c1",
+  "description": "Kado digital interaktif untuk ulang tahunmu.",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

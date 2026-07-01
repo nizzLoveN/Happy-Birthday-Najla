@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ffd1dc">
+    <title>Untuk Semestaku | Selamat Ulang Tahun</title>
+    
+    <meta name="description" content="Sebuah surat cinta digital dan perayaan untuk perempuan paling istimewa.">
+    <meta property="og:title" content="Untuk Semestaku | Selamat Ulang Tahun">
+    <meta property="og:description" content="Kado digital spesial yang dibuat sepenuh hati.">
+    <meta property="og:type" content="website">
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-day">
+
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-heart"></div>
+            <p class="loading-text">Merangkai kenangan indah...</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aurora-bg" id="aurora-bg"></div>
+    <canvas id="particle-canvas"></canvas>
+    
+    <nav class="floating-nav glass-panel">
+        <button id="theme-toggle" class="magnetic-btn" aria-label="Toggle Theme">
+            <span class="icon-moon">🌙</span>
+        </button>
+        <button id="camera-toggle" class="magnetic-btn" aria-label="Toggle Vintage Camera">
+            <span class="icon-camera">📷</span>
+        </button>
+    </nav>
+
+    <div class="music-player glass-panel" id="music-player">
+        <div class="album-art pulse">🎵</div>
+        <div class="music-info">
+            <p class="song-title">Lagu Kita</p>
+            <div class="visualizer" id="visualizer">
+                </div>
+        </div>
+        <button id="play-pause-btn" class="magnetic-btn">▶</button>
+        <audio id="bg-music" loop>
+            <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <main data-scroll-container>
+        
+        <section class="hero hidden-section" id="hero">
+            <div class="hero-content">
+                <h2 class="subtitle fade-up" style="transition-delay: 0.2s">Teruntuk perempuan yang paling kucintai,</h2>
+                <h1 class="title handwritten fade-up" style="transition-delay: 0.4s">Selamat Ulang Tahun, Sayang.</h1>
+                <p class="description fade-up" style="transition-delay: 0.6s">Sebuah ruang kecil di internet, khusus kusiapkan untuk merayakan keberadaanmu yang begitu berharga di duniaku.</p>
+                <div class="scroll-indicator fade-up" style="transition-delay: 1s">
+                    <p>Gulir perlahan</p>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-timeline hidden-section" id="story">
+            <h2 class="section-title elegant-serif text-center">Lembar Cerita Kita</h2>
+            <div class="timeline-container">
+                <div class="timeline-item glass-card right magnetic-card">
+                    <div class="tape"></div>
+                    <div class="date">Awal Pertemuan</div>
+                    <p>Hari di mana semestaku berubah warna. Senyum pertamamu adalah keajaiban yang tak pernah berhenti kusyukuri hingga detik ini.</p>
+                </div>
+                <div class="timeline-item glass-card left magnetic-card">
+                    <div class="tape tape-blue"></div>
+                    <div class="date">Tawa Bersama</div>
+                    <p>Momen-momen sederhana bersamamu selalu terasa mewah. Mulai dari obrolan larut malam hingga tawa yang tak bisa berhenti.</p>
+                </div>
+                <div class="timeline-item glass-card right magnetic-card">
+                    <div class="tape tape-pink"></div>
+                    <div class="date">Hari Ini</div>
+                    <p>Merayakan bertambahnya usiamu, dan bertambah pula rasa cintaku padamu. Kamu adalah anugerah terindah.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery hidden-section" id="gallery">
+            <h2 class="section-title elegant-serif text-center">Galeri Kenangan</h2>
+            <p class="text-center soft-text mb-4">Geser dan susun foto-foto ini sesukamu.</p>
+            <div class="polaroid-container" id="polaroid-container">
+                <div class="polaroid draggable">
+                    <div class="pin"></div>
+                    <img src="assets/images/photo1.jpg" alt="Kenangan 1" loading="lazy">
+                    <p class="handwritten">Senyum manismu</p>
+                </div>
+                <div class="polaroid draggable">
+                    <div class="tape tape-blue"></div>
+                    <img src="assets/images/photo2.jpg" alt="Kenangan 2" loading="lazy">
+                    <p class="handwritten">Hari yang indah</p>
+                </div>
+                <div class="polaroid draggable">
+                    <div class="tape tape-pink"></div>
+                    <img src="assets/images/photo3.jpg" alt="Kenangan 3" loading="lazy">
+                    <p class="handwritten">Selalu bersamamu</p>
+                </div>
+                <div class="polaroid draggable">
+                    <div class="pin"></div>
+                    <img src="assets/images/photo4.jpg" alt="Kenangan 4" loading="lazy">
+                    <p class="handwritten">Kesayangan</p>
+                </div>
+                <div class="polaroid draggable">
+                    <div class="tape"></div>
+                    <img src="assets/images/photo5.jpg" alt="Kenangan 5" loading="lazy">
+                    <p class="handwritten">Duniaku</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="letter-section hidden-section" id="letter">
+            <div class="envelope-container" id="envelope">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-paper">
+                        <h3 class="elegant-serif">Untuk Kesayanganku,</h3>
+                        <p>Selamat ulang tahun. Aku harap kamu tahu betapa berartinya dirimu bagiku. Setiap detik bersamamu adalah puisi yang tak pernah bosan kubaca. Terima kasih sudah lahir ke dunia ini, dan terima kasih sudah memilihku untuk menjadi bagian dari ceritamu.</p>
+                        <p>Semoga semua doa dan harapan baikmu perlahan mewujud nyata. Aku akan selalu ada di sini, menggenggam tanganmu, di setiap musim kehidupanmu.</p>
+                        <p class="signature handwritten">Dengan seluruh cintaku.</p>
+                    </div>
+                </div>
+                <p class="hint">Klik amplop untuk membuka surat rahasia</p>
+            </div>
+        </section>
+
+        <section class="gift-section hidden-section text-center" id="gift">
+            <h2 class="section-title elegant-serif">Sebuah Kejutan</h2>
+            <div class="gift-box" id="gift-box">
+                <div class="gift-lid"></div>
+                <div class="gift-body">
+                    <div class="gift-ribbon-vertical"></div>
+                    <div class="gift-ribbon-horizontal"></div>
+                </div>
+            </div>
+            <p class="gift-hint">Ketuk kado ini dengan lembut</p>
+        </section>
+
+        <section class="guestbook-section hidden-section" id="guestbook">
+            <h2 class="section-title elegant-serif text-center">Buku Harapan</h2>
+            <div class="glass-panel guestbook-container">
+                <form id="wish-form">
+                    <textarea id="wish-input" placeholder="Tulis harapanmu di sini..." required></textarea>
+                    <button type="submit" class="submit-btn magnetic-btn">Simpan Harapan</button>
+                </form>
+                <div class="wishes-list" id="wishes-list">
+                    </div>
+            </div>
+        </section>
+
+        <footer class="footer text-center">
+            <p class="handwritten final-words">Aku mencintaimu, lebih dari kata-kata yang bisa kutuliskan.</p>
+            <div class="floating-hearts-footer"></div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
